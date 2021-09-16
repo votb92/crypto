@@ -1,5 +1,5 @@
 class Secret
-  @@API_Key = '14c1f2e4-fff3-4319-979b-f024adc98a2c'
+  @@API_Key = 'YOUR API KEY HERE'
   def self.key
     @@API_Key
   end
