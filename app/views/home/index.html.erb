@@ -5,7 +5,8 @@
 <% for x in @coins['data'] %>
   <% for coin in @mycoin %>
     <% if coin == x["symbol"] %>
-      <%= x["name"] %>
+      <%= x["name"] %> : <%= x["price_usd"] %><br/>
+      Rank: <%= x["rank"] %> <br/> <br/>
     <% end %>
   <% end %>
 <% end %>

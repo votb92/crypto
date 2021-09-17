@@ -11,5 +11,17 @@ class HomeController < ApplicationController
     @response = Net::HTTP.get(@uri)
     @coins = JSON.parse(@response)
     @mycoin = ["BTC", "XRP", "ADA", "XLM", "STEEM"]
+
+
+  end
+
+  def lookup
+    @symbol = params['sym']
+    if @symbol
+      @symbol = @symbol.upcase
+    end
+    if @symbol == ""
+      @symbol = "You forgot to enter something"
+    end
   end
 end
